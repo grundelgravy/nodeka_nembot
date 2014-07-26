@@ -192,6 +192,8 @@ public class script
             {
               val = Integer.parseInt(m.group(1));
             } catch (NumberFormatException ex) {
+              if (m.group(1).contains("many"))
+                val = 50; // skeleton in graveyard basic fix :P
               if (m.group(1).contains("sixty"))
                 val = 60;
               if (m.group(1).contains("fifty"))
